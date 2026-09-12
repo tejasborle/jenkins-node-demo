@@ -4,6 +4,7 @@ const {
   calculateDiscount,
   multiply,
   divide,
+  increamentbyone,
 } = require("../src/math");
 
 describe("Math utilities", () => {
