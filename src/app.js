@@ -1,5 +1,5 @@
 const express = require("express");
-const { add, multiply, divide } = require("./math");
+const { add, multiply, divide, increamentbyone } = require("./math");
 
 const app = express();
 
@@ -53,6 +53,20 @@ app.get("/api/divide", (req, res) => {
 
   return res.json({
     result: divide(a, b),
+  });
+});
+
+app.get("/api/increamentbyone", (req, res) => {
+  const a = Number(req.query.a);
+
+  if (!Number.isFinite(a)) {
+    return res.status(400).json({
+      error: "a must be a valid number",
+    });
+  }
+
+  return res.json({
+    result: increamentbyone(a),
   });
 });
 

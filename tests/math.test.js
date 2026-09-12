@@ -4,6 +4,7 @@ const {
   calculateDiscount,
   multiply,
   divide,
+  increamentbyone,
 } = require("../src/math");
 
 describe("Math utilities", () => {
@@ -31,5 +32,9 @@ describe("Math utilities", () => {
 
   test("divides two numbers", () => {
     expect(divide(10, 2)).toBe(5);
+  });
+
+  test("increments a number by one", () => {
+    expect(increamentbyone(5)).toBe(6);
   });
 });
