@@ -14,6 +14,10 @@ function divide(a, b) {
   return a / b;
 }
 
+function increamentbyone(a) {
+  return a + 1;
+}
+
 function calculateDiscount(price, percentage) {
   if (price < 0 || percentage < 0 || percentage > 100) {
     throw new Error("Invalid price or discount");
@@ -28,4 +32,5 @@ module.exports = {
   calculateDiscount,
   multiply,
   divide,
+  increamentbyone,
 };
